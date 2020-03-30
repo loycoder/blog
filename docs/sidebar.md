@@ -1,6 +1,7 @@
 - [前后端分离接口规范](/modules/api-standard/index)
 - [代码块](/modules/code-chunk/index)
-- [JS重要知识点](/modules/code-chunk/index)
+- [JavaScript知识点](/modules/code-chunk/index)
+- [解决方案](/modules/solution/index)
 - [算法篇](/modules/code-chunk/index)
 
 

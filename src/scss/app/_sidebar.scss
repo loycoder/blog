@@ -6,9 +6,6 @@ main>.content {
   transition: all var(--sidebar-transition-duration) ease-out;
 }
 
-.sidebar {
-  border: 1px solid red;
-}
 
 nav.app-nav {
   @include media(">=medium") {
@@ -52,7 +49,8 @@ main {
   border-width  : var(--sidebar-border-width);
   border-style  : solid;
   border-color  : var(--sidebar-border-color);
-  background    : var(--sidebar-background);
+  background    : #2a2935;
+
 
   >h1 {
     margin     : 0;
@@ -117,26 +115,29 @@ main {
   }
 
   a {
-    display              : block;
-    overflow             : hidden;
-    margin               : var(--sidebar-nav-link-margin);
-    padding              : var(--sidebar-nav-link-padding);
-    border-width         : var(--sidebar-nav-link-border-width, 0);
-    border-style         : var(--sidebar-nav-link-border-style);
-    border-color         : var(--sidebar-nav-link-border-color);
-    border-radius        : var(--sidebar-nav-link-border-radius);
-    background-color     : var(--sidebar-nav-link-background-color);
-    background-image     : var(--sidebar-nav-link-background-image);
-    background-position  : var(--sidebar-nav-link-background-position);
-    background-repeat    : var(--sidebar-nav-link-background-repeat);
-    background-size      : var(--sidebar-nav-link-background-size);
-    color                : var(--sidebar-nav-link-color);
-    font-weight          : var(--sidebar-nav-link-font-weight);
-    white-space          : nowrap;
-    text-decoration      : var(--sidebar-nav-link-text-decoration);
-    text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
-    text-overflow        : ellipsis;
-    transition           : var(--sidebar-nav-link-transition);
+    display                 : block;
+    overflow                : hidden;
+    margin                  : var(--sidebar-nav-link-margin);
+    padding                 : var(--sidebar-nav-link-padding);
+    border-width            : var(--sidebar-nav-link-border-width, 0);
+    border-style            : var(--sidebar-nav-link-border-style);
+    border-color            : var(--sidebar-nav-link-border-color);
+    border-radius           : var(--sidebar-nav-link-border-radius);
+    background-color        : var(--sidebar-nav-link-background-color);
+    background-image        : var(--sidebar-nav-link-background-image);
+    background-position     : var(--sidebar-nav-link-background-position);
+    background-repeat       : var(--sidebar-nav-link-background-repeat);
+    background-size         : var(--sidebar-nav-link-background-size);
+    color                   : #fff;
+    font-weight             : var(--sidebar-nav-link-font-weight);
+    white-space             : nowrap;
+    text-decoration         : var(--sidebar-nav-link-text-decoration);
+    text-decoration-color   : var(--sidebar-nav-link-text-decoration-color);
+    text-overflow           : ellipsis;
+    // transition           : var(--sidebar-nav-link-transition);
+
+    // 
+
 
     img {
       margin-top    : -0.25em;
@@ -148,17 +149,17 @@ main {
     }
 
     &:hover {
-      border-width         : var(--sidebar-nav-link-border-width--hover, var(--sidebar-nav-link-border-width, 0));
-      border-style         : var(--sidebar-nav-link-border-style--hover, var(--sidebar-nav-link-border-style));
-      border-color         : var(--sidebar-nav-link-border-color--hover, var(--sidebar-nav-link-border-color));
-      background-color     : var(--sidebar-nav-link-background-color--hover, var(--sidebar-nav-link-background-color));
-      background-image     : var(--sidebar-nav-link-background-image--hover, var(--sidebar-nav-link-background-image));
-      background-position  : var(--sidebar-nav-link-background-position--hover, var(--sidebar-nav-link-background-position));
-      background-size      : var(--sidebar-nav-link-background-size--hover, var(--sidebar-nav-link-background-size));
-      color                : var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color));
-      font-weight          : var(--sidebar-nav-link-font-weight--hover, var(--sidebar-nav-link-font-weight));
-      text-decoration      : var(--sidebar-nav-link-text-decoration--hover, var(--sidebar-nav-link-text-decoration));
-      text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+      border-width    : var(--sidebar-nav-link-border-width--hover, var(--sidebar-nav-link-border-width, 0));
+      border-style    : var(--sidebar-nav-link-border-style--hover, var(--sidebar-nav-link-border-style));
+      border-color    : var(--sidebar-nav-link-border-color--hover, var(--sidebar-nav-link-border-color));
+      background-color: #08080a;
+      ;
+      background-image   : var(--sidebar-nav-link-background-image--hover, var(--sidebar-nav-link-background-image));
+      background-position: var(--sidebar-nav-link-background-position--hover, var(--sidebar-nav-link-background-position));
+      background-size    : var(--sidebar-nav-link-background-size--hover, var(--sidebar-nav-link-background-size));
+      color              : #FFF;
+      font-weight        : var(--sidebar-nav-link-font-weight--hover, var(--sidebar-nav-link-font-weight));
+      transition         : all 0.5s ease-in-out;
     }
   }
 
