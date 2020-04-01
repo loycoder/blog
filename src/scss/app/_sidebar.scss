@@ -17,6 +17,7 @@ main {
   position  : relative;
   overflow-x: hidden;
   min-height: 100vh;
+  background: #fdfdfd;
 
   >.content {
     @include media(">=medium") {
@@ -58,7 +59,7 @@ main {
     padding    : var(--sidebar-name-padding);
     background : var(--sidebar-name-background);
     color      : var(--sidebar-name-color);
-    font-family: var(--sidebar-name-font-family);
+    font-family: 'PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif';
     font-size  : var(--sidebar-name-font-size);
     font-weight: var(--sidebar-name-font-weight);
     text-align : var(--sidebar-name-text-align);

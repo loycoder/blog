@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
     content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000" />
   <meta name="description" content="">
   <title>loy blog</title>
   <link rel="stylesheet" href="./build/css/theme-simple.css">
@@ -14,16 +16,10 @@
 
 <body>
 
-  <nav>
-    <a href="#/">EN</a>
-    <a href="#/zh-cn/">中文</a>
-  </nav>
+
   <div id="app"></div>
 
-
-
   <script>
-
 
     // Docsify
     window.$docsify = {
@@ -31,9 +27,11 @@
       // -----------------------------------------------------------------
       name: 'loy blog',
       // repo: 'https://github.com/loycoder',
+      // coverpage: 'coverpage.html',
       coverpage: 'coverpage.md',
       homepage: 'modules/main.md',
       loadSidebar: '../sidebar.md',
+      onlyCover: true,
 
       // NAVIGATION
       // -----------------------------------------------------------------

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <div class="cover-page-container" id="container">
+    <div class="cover-cover--overlay"></div>
+  </div>
+
+  <style type="text/css">
+    .cover-page-container {
+      display: block;
+      background: url("./assets/img/cover-page/th.jpeg");
+      border: 1px solid red;
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      position: fixed;
+      z-index: 900;
+      left: 0;
+      top: 0;
+    }
+
+    .cover-cover--overlay {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(68, 68, 68, .2);
+      background-image: linear-gradient(140deg, rgba(68, 68, 68, 0.6) 20%, rgba(0, 0, 0, 0.9));
+    }
+  </style>
+
+  <script type="text/javascript">
+
+    // let classOp = {
+
+    //   //添加css规则
+    //   addCSSRule: (sheet, selector, rules, index) {
+    //     if ("insertRule" in sheet) {
+    //       sheet.insertRule(selector + "{" + rules + "}", index);
+    //     } else if ("addRule" in sheet) {
+    //       sheet.addRule(selector, rules, index);
+    //     }
+    //   },
+
+    //   //删除CSS规则
+    //   delCSSRule: (sheet) {
+    //     sheet.deleteRule(0)
+    //   },
+    // }
+
+    $(function () {
+
+      $.ajax({
+        url: "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=1&n=1&mkt=zh-CN",    //请求的url地址
+        dataType: "json",
+        data: { "format": "js", idx: 1, n: 1, mkt: 'zh-CN' },    //参数值
+        type: "POST",   //请求方式
+        beforeSend: function () {
+          //请求前的处理
+        },
+        success: function (req) {
+          //请求成功时处理
+        },
+        complete: function () {
+          //请求完成的处理
+        },
+        error: function () {
+          //请求出错处理
+        }
+      });
+    })
+
+
+
+    window.onload = function () {
+      var container = document.querySelector("#container");
+      // container.addCSSRule()
+    }
+  </script>
+</body>
+
+</html>
