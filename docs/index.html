@@ -50,6 +50,8 @@
         placeholder: 'Search...'
       }
     };
+
+
   </script>
   <script src="assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -63,6 +65,45 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+
+  <script>
+    var active = null
+    document.addEventListener('DOMContentLoaded', function () {
+      var sidebar = document.querySelector('.sidebar-nav');
+      sidebar.addEventListener('click', function (e) {
+        var e = e || window.e;
+        var target = e.srcElement || e.target;
+
+        if (target.nodeName.toLowerCase() == 'a') {
+
+          active = document.querySelector('.active')
+          // if (active) {
+
+          // }
+          // // 
+
+          // console.log(active.parentNode);
+
+          // active.innerHTML = 'aa'
+
+          // e.preventDefault();
+          // if (e.preventDefault) {
+          //   e.preventDefault();
+          // } else {
+          //   window.event.returnValue == false;
+          // }
+
+          // console.log(target.parentNode);
+          // // e.stopPropagation()
+          // e.preventDefault()
+
+        }
+
+      });
+    }, false);
+
+
+  </script>
 </body>
 
 </html>

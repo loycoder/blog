@@ -2,6 +2,7 @@
 - [代码块](/modules/code-chunk/index)
 - [JavaScript知识点](/modules/code-chunk/index)
 - [解决方案](/modules/solution/index)
+- [Git篇](/modules/git/index)
 - [算法篇](/modules/code-chunk/index)
 
 
