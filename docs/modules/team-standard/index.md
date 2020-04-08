@@ -31,4 +31,4 @@
 * [引用字体推荐](modules/team-standard/recommend-css-font.md)
 
 ## 思维导图
-![image](https://loycoder.github.io/blog/assets/img/modules/team-standard/flow.png)
+![image](https://loycoder.github.io/blog/assets/img/team-standard/flow.png)
