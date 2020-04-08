@@ -1,9 +1,9 @@
 - [前后端分离接口规范](/modules/api-standard/index)
+- [前端开发规范](/modules/team-standard/index)
 - [代码块](/modules/code-chunk/index)
-- [JavaScript知识点](/modules/code-chunk/index)
+- [JavaScript知识点](/modules/js-dot/index)
 - [解决方案](/modules/solution/index)
-- [算法篇](/modules/code-chunk/index)
-
+<!-- - [算法篇](/modules/arithmetic/index) -->
 
 
 
