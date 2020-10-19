@@ -1,6 +1,5 @@
-# Number()、parseInt()和parseFloat()的区别
 
-##  Number()
+####  Number()
 >* 如果是Boolean值，true和false值将分别被转换为1和0。
 >* 如果是数字值，只是简单的传入和返回。
 >* 如果是null值，返回0。
@@ -27,7 +26,7 @@
 ```
 
 
-## parseInt()
+#### parseInt()
 
 处理整数的时候parseInt()更常用。parseInt()函数在转换字符串时，会忽略字符串前面的空格，知道找到第一个非空格字符。
 
@@ -46,7 +45,7 @@ parseInt()方法还有基模式，可以把二进制、八进制、十六进制�
 　var num4 = parseInt("abc");　　　　　　　　　//NaN
 ```
 
-## parseFloat()
+#### parseFloat()
 
  与parseInt() 函数类似，parseFloat() 也是从第一个字符（位置0）开始解析每一个字符。也是一直解析到字符串末尾，或者解析到遇见一个无效的浮点数字字符为止。
 
@@ -65,6 +64,6 @@ parseInt()方法还有基模式，可以把二进制、八进制、十六进制�
 ```
 
 
-##  parseInt() 和parseFloat() 的区别在于：
+####  parseInt() 和parseFloat() 的区别在于：
 parseFloat() 所解析的字符串中第一个小数点是有效的，而parseInt() 遇到小数点会停止解析，因为小数点并不是有效的数字字符。
 parseFloat() 始终会忽略前导的零，十六进制格式的字符串始终会被转换成0，而parseInt() 第二个参数可以设置基数，按照这个基数的进制来转换。
