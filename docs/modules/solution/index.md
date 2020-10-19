@@ -1,10 +1,17 @@
 # 解决方案
 
- *  ### [前端骨架屏自动生成方案](/modules/solution/skeleton)
 
- *  ### [微前端项目实践方案](/modules/solution/micro)
+## 前端骨架屏自动生成方案
+[flow](./skeleton.md ':include')
 
- *  ###  [git submodule自动化实现方案](/modules/solution/node_git_submodule)
+
+## 微前端项目实践方案
+[flow](./micro.md ':include')
+
+
+## git submodule自动化实现方案
+[flow](./node_git_submodule.md ':include')
+
 
 
  <!-- https://juejin.im/post/5d320900f265da1bd424bab9#heading-2
