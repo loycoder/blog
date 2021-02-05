@@ -57,3 +57,19 @@
     Right = "RIGHT",
 }
 ```
+
+ 使用 const enum 维护常量表
+
+ ```js
+
+ // 使用 const enum 维护常量
+const enum TODO_STATUS {
+  TODO = 'TODO',
+  DONE = 'DONE',
+  DOING = 'DOING'
+}
+
+function todos (status: TODO_STATUS): Todo[];
+
+todos(TODO_STATUS.TODO)
+```

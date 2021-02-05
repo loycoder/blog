@@ -1,6 +1,9 @@
 # 解决方案
 
 
+## 前端常见跨域解决方案（转载）
+[flow](./cross-domain.md ':include')
+
 ## 前端骨架屏自动生成方案
 [flow](./skeleton.md ':include')
 

@@ -1,15 +1,25 @@
 # typescript 学习笔记：
 
-
 ## ! 断言操作符
 [_sidebar](assert-symbol.md ':include')
 
 <div class='swrap-line' ></div>
 
 
+## ?. 可选链
+[link-symbol](link-symbol.md ':include')
 
-## ?. 链判断运算符
-[_sidebar](link-symbol.md ':include')
+<div class='swrap-line' ></div>
+
+
+## ?? 空值合并
+[merge-symbol](merge-symbol.md ':include')
+
+<div class='swrap-line' ></div>
+
+
+## _数字分隔符
+[split-symbol](split-symbol.md ':include')
 
 <div class='swrap-line' ></div>
 
@@ -19,28 +29,39 @@
 <div class='swrap-line' ></div>
 
 
-
-
 ## keyof和in
 [_sidebar](keyof-in.md ':include')
 
 <div class='swrap-line' ></div>
 
 
-
 ## Partial
 [partial](partial.md ':include')
+<div class='swrap-line' ></div>
 
+
+## Record
+[record](record.md ':include')
 <div class='swrap-line' ></div>
 
 
 ## Required
 [Required](required.md ':include')
-
 <div class='swrap-line' ></div>
 
 ## 枚举（Enum）
-[_sidebar](enum.md ':include')
+[enum](enum.md ':include')
+<div class='swrap-line' ></div>
+
+
+## 联合类型（|）
+[unite](unite.md ':include')
+<div class='swrap-line' ></div>
+
+## 类型断言
+[type-assertions](type-assertions.md ':include')
+<div class='swrap-line' ></div>
+
 
   
 

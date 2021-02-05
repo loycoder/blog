@@ -37,8 +37,17 @@ function get(o: object, name: string) {
 
 这时可以使用 `keyof` 来加强 get 函数的类型功能，有兴趣的同学可以看看 `_.get` 的 `type` 标记以及实现
 
+#### 应用:`get函数实现`
+
 ```js
 function get<T extends object, K extends keyof T>(o: T, name: K): T[K] {
   return o[name]
 }
+
+// 调用：
+const test = {
+  a: 1,
+  b:2
+}
+get(test, 'a');
 ``
