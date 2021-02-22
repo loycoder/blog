@@ -63,6 +63,11 @@
 <div class='swrap-line' ></div>
 
 
+## 实用的TS实战技巧
+[type-assertions](practical.md ':include')
+<div class='swrap-line' ></div>
+
+
   
 
 
