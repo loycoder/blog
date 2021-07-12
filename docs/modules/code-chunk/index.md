@@ -1,242 +1,42 @@
-> ## 手写 new的实现
-> #### JavaScript在实例化一个对象，主要有几个步骤：
-> * 1. 创建一个新的空对象{} 
-> * 2. 将空对象的 __proto__ 属性指向构造函数的prototype对象. 
-> * 3. 使用新对象调用函数(通过call、apply等)，函数中的this指向新实例对象
-> * 4. 返回新对象 
-
-代码实现：
-
-```js
-  function _news() {
-    let result = {}
-    const obj = [].shift.call(arguments)
-    result.__proto__ = obj.prototype
-    const n = obj.apply(result, arguments)
-    return n instanceof Object ? n : result
-  }
-
-  // 调用
-  function Person(name) {
-    this.name = name
-    this.say = function () {
-      console.log('this.name: ', this.name);
-    }
-  }
-  _news(Person,'jeck',10).say()
-```
+ ## 手写 new的实现
+[1-new](1-new.md ':include')
+<div class='swrap-line' ></div>
 
 
-> ## 手写-call的实现
-> #### call函数 其原理是利用了 JavaScript的上下文。（不同作用域this 指向不同）
-> 
- 
-```js
 
-   Function.prototype.myCall = function(context) {
-      let temp=Symbol('call');  //创建一个匿名函数，是为了防止context属性覆盖
-      context= context || window;  // this 上下文，无上下文默认指向 window
-      context[temp]=this;    //将
-      let args=[]
-      for(let i=1; i<arguments.length; i++){
-         args.push(arguments[i])
-     }
-     let result= context[temp](...args)
-     delete context[temp]
-     return result;
-  }
-```
-
+ ## 手写 call的实现
+[call](2-call.md ':include')
+<div class='swrap-line' ></div>
 
 
 ## 手写 bind的实现
-和call apply 的作用很相似，唯一的区别就是绑定this 指向后，不会立即执行。
 
- ```js
-  Function.prototype.myBind = function () {
-    let that=this, thatArgs=arguments[0];
-    let  args = Array.prototype.slice.call(arguments, 1)
-    if(typeof that !== 'function') {
-      throw new TypeError('myBind callback is not a function');
-    }
-    return (function (){
-      return that.apply(thatArgs, args);
-    })
-  }
-  ```
+[bind](3-bind.md ':include')
+<div class='swrap-line' ></div>
 
 
 ## 斐波拉契求和
- ```js
-/**
- * 斐波拉契,求和
- * 0 1 2 3 5 8 13
- * @param n
- * @returns {*}
- */
-function Fibonacci(n) {
-  let val = new Array(n).fill(0)  // 初始化数组长度为n,默认值为0
-  val[1] = 1;
-  val[2] = 2;
-  for (let i = 3; i <= n; ++i) {
-    val[i] = val[i - 1] + val[i - 2]
-  }
-  return val
-}
 
-let count = Fibonacci(2).reduce(function (pre, current) {
-  return pre + current
-})
-console.error('val=====>', count);
+[4-fibonacci](4-fibonacci.md ':include')
+<div class='swrap-line' ></div>
 
- ```
 
 
 ## 插入排序
-
- >  从数组下标1 开始，每遍历一次，比较的元素在原基础上加1，越往后遍历次数越多。
-
-插入排序图解
-
-```js
-function insertSort (arr) {
-    for (var i = 1;i < arr.length;i++){
-
-        for(var j = i;j > 0 && arr[j] < arr[j-1];j--){
-
-            // 当前值和之前的每个值进行比较，发现有比当前值小的值就进行交换
-            let temp = arr[j];  //先取出 next 值，即 小的那个
-
-            arr[j] = arr[j-1]; 
-            arr[j-1] = temp;  
-        }
-    }
-    return arr
-}
-
-// 优化版 少一次赋值
- function insertSort(arr) {
-    var len = arr.length;
-    var temp;
-    for (var i = 1; i < len; i++) {
-      temp = arr[i]
-      for (var j = i; j > 0 && temp < arr[j - 1]; j--) {
-        // 当前值和之前的每个值进行比较，发现有比当前值小的值就进行重新赋值
-        arr[j] = arr[j - 1]; 
-      }
-      arr[j] = temp;
-    }
-    return arr;
- }
-```
-
+[5-insertion-sort](5-insertion-sort.md ':include')
+<div class='swrap-line' ></div>
 
 
 ## 快速排序
-
-> 参见阮一峰的博客，很通俗易懂：
-> 快速排序（Quicksort）的Javascript实现 - 阮一峰的网络日志（www.ruanyifeng.com）
-> 思路如下：
-> * 1. 在数据集之中，选择一个元素作为"基准"（pivot）
-> * 2. 所有小于"基准"的元素，都移到"基准"的左边；所有大于"基准"的元素，都移到"基准"的右边。
-> * 3. 对"基准"左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。
-
-```js
-    function quickSort(array) {
-      if (array.length <= 1) { return array }
-      let left=[], right =[];
-
-      let middleIndex = Math.floor(array.length/2);
-
-      let middleValue= arr.splice(middleIndex,1)[0]
-
-      for (let index = 0; index < array.length; index++) {
-        
-        if(array[index] < middleValue) {
-          left.push (array[index])
-        }else{
-          right.push (array[index])
-        }
-      }
-      return quickSort(left).concat([middleValue],quickSort(right))
-    }
-```
+[6-quick-sort](6-quick-sort.md ':include')
+<div class='swrap-line' ></div>
 
 
 ## 树的操作
-
-```js
-
-  /**
-   * 递归查找指定节点的所有父级id
-   * @param {*} data  树形数据  
-   *    树形数据 格式：
-   *        interface TreeItem {
-   *            title:string;
-   *            groupId:number;
-   *            children:TreeItem[]
-   *        }
-   *      data:  {title, groupId, children:[]}
-   * @param {*} id  当前子集id
-   * @param {*} keyMap  键值映射
-   * @param {*} [indexArray=[]]  // 返回的父级ID集合
-   * @returns
-   */
-  function findParentIdOfTree (data, id, keyMap = { id: 'groupId', children: 'childrenList', text: 'groupName' }, indexArray = []) {
-  const arr = Array.from(indexArray)
-  for (let i = 0, len = data.length; i < len; i++) {
-
-    const childrenList = data[i][keyMap.children]
-    const groupId = data[i][keyMap.id]
-    const groupName = data[i][keyMap.text]
-
-    arr.push({ groupId, groupName })
-
-    if (groupId === id) {
-      return arr
-    }
-    if (childrenList && childrenList.length) {
-      const result = findParentIdOfTree(childrenList, id, keyMap, arr)
-      if (result) {
-        return result
-      }
-    }
-  }
-  return false
-}
-```
+[7-tree](7-tree.md ':include')
+<div class='swrap-line' ></div>
 
 
-## promise延迟统一处理操作
-
-```js
-
-/**
- * 延迟回调函数执行时间
- * @param promise  异步请求 promise
- * @param callback 状态更改的回调函数，如 () => this.setState({loading: false})
- * @param interval loading 最短时长
- */ 
-export const extendExecutedTime = (promise, callback, interval = 600) => {
-  const startTime = new Date().getTime();
-  promise.finally(() => {
-    const endTime = new Date().getTime();
-    const executedTime = endTime - startTime;
-    if (executedTime < interval) {
-      setTimeout(() => {
-        callback();
-      }, interval - executedTime);
-    } else {
-      callback();
-    }
-  });
-
-  return promise;
-}
-
-// 调用示例：
-  const callback = () => { this.setLoading(false) };
-  extendExecutedTime(promise, callback).catch(err => {
-    console.log('err: ', err);
-  });
-```
+## promise相关
+[8-promise](8-promise.md ':include')
+<div class='swrap-line'></div>
