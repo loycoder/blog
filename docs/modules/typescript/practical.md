@@ -1,6 +1,6 @@
 #### 总结ts 实战技巧：
 
-1. 模拟实现lodash 的 `get` 方法：
+### 1. 模拟实现lodash 的 `get` 方法：
    
 
 ```js
@@ -10,7 +10,7 @@ function get<T extends Object, Key extends keyof T>(obj: T, key: Key  ) {
 }
 ```
 
-2. `set` 方法实现：
+### 2. `set` 方法实现：
 
 ```js
 
@@ -21,7 +21,7 @@ function set<T extends Data, Key extends keyof T,>(obj: T, key: Key, value: T[Ke
 
 ```
 
-3. 对 `async` `await` 的TS 封装
+### 3. 对 `async` `await` 的TS 封装
 
  当我们发起异步请求，（例如接口请求），对于成功和失败的数据。 该函数统一返回一个数组，
    1.第一个元素表示错误，成功返回null, 失败返回 继承自Error的 对象, 
