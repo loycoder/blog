@@ -1,3 +1,0 @@
-<div style='margin-bottom:130px;'>
-写作中...
-</div>
